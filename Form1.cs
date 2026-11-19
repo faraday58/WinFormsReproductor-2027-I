@@ -31,5 +31,19 @@ namespace WinFormsReproductor_2027_I
             lbAlbum.Text = cancion.Album;
             lbNombre.Text = cancion.Nombre;
         }
+
+        private void AgregarCancionEvent(Modelo.Musica cancion)
+        {
+            listaReproduccion.Add(cancion);
+            lstbReproduccion.Items.Add(cancion.Nombre);
+
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAgregar formAgregar = new FormAgregar();
+            formAgregar.AgregarCancionEvent += AgregarCancionEvent;
+            formAgregar.ShowDialog();
+        }
     }
 }

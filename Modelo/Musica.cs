@@ -1,7 +1,7 @@
 ﻿
 namespace WinFormsReproductor_2027_I.Modelo
 {
-    internal class Musica
+    public class Musica
     {
         #region Atributos
         private string nombre;
